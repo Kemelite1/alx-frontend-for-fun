@@ -1,0 +1,16 @@
+/* Task: A Sass file that creates a class for each name
+ in the list $list-names and assigns
+  the background image based on the name */
+
+// Import list of names
+@import '11-names';
+
+// Define the base path for photos
+$photos-path: "photos/";
+
+// Loop through each name in the list and create a class for each
+@each $name in $list-names {
+  .photo-#{$name} {
+    background: image-url("#{$photos-path}#{$name}.jpg") no-repeat;
+  }
+}
