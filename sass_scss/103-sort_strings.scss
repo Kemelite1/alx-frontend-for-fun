@@ -1,0 +1,12 @@
+/* Task: A Sass file that sorts the variable $list_to_sort 
+and prints the sorted list in the debug output. */
+
+
+// Define the unsorted list
+$list_to_sort: john anna zoe kim felicia carrie;
+
+// Sort the list
+$list_sorted: sort($list_to_sort);
+
+// Print the sorted list in the debug output
+@debug $list_sorted;
