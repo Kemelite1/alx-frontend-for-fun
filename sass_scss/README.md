@@ -10,3 +10,41 @@ Sass preprocessing involves compiling Sass or SCSS files into standard CSS files
 Variables in Sass/SCSS are declared using the $ symbol followed by the variable name and assigned a value. For example: `$primary-color: #FFF;`
 # How to import a Sass file:
 You can import other Sass files into your main Sass file using the @import directive. For example: `@import 'variables';`
+# How to use nested definition:
+Nested definitions allow you to nest CSS selectors within one another, which can improve readability and maintainability.
+`nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+`
+# How to declare extend/inheritance styles:
+Extend/inheritance allows one selector to inherit styles from another selector. This is done using the @extend directive.
+`%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend %message-shared;
+  background-color: #dff0d8;
+}
+
+.error {
+  @extend %message-shared;
+  background-color: #f2dede;
+}
+`
+# How to manipulate operators:
+Sass supports various mathematical operators like +, -, *, /, and % for numeric values. 
+`.container {
+  width: 100% / 3;
+}
+`
